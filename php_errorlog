@@ -1,0 +1,7 @@
+[03-Jun-2020 00:04:28 Europe/London] PHP Notice:  Undefined property: stdClass::$parent in /home/tristand/twotonnes/student39/blocks/course_admin/index.php on line 432
+[03-Jun-2020 00:05:10 Europe/London] PHP Notice:  Undefined property: stdClass::$parent in /home/tristand/twotonnes/student39/blocks/course_admin/index.php on line 432
+[10-Jun-2020 16:03:13 Europe/London] PHP Notice:  Undefined property: stdClass::$parent in /home/tristand/twotonnes/student39/blocks/course_admin/index.php on line 432
+[24-Jun-2020 12:46:17 Europe/London] PHP Notice:  Undefined property: stdClass::$parent in /home/tristand/twotonnes/student39/blocks/course_admin/index.php on line 432
+[01-Jul-2020 12:17:09 Europe/London] PHP Notice:  Undefined variable: message in /home/tristand/twotonnes/student39/blocks/course_admin/index.php on line 1274
+[01-Jul-2020 12:18:10 Europe/London] PHP Notice:  Undefined variable: message in /home/tristand/twotonnes/student39/blocks/course_admin/index.php on line 1274
+[01-Jul-2020 12:18:27 Europe/London] PHP Notice:  Undefined variable: message in /home/tristand/twotonnes/student39/blocks/course_admin/index.php on line 1274

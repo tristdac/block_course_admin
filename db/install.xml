@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="blocks/course_admin/db" VERSION="20170415" COMMENT="XMLDB file for Moodle blocks/course_admin"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+  <TABLES>
+    <TABLE NAME="block_course_admin_courses" COMMENT="List of courses to create">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+        <FIELD NAME="courseid" TYPE="int" LENGTH="15" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="template" TYPE="int" LENGTH="15" NOTNULL="false" SEQUENCE="false"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+        <KEY NAME="unique" TYPE="unique" FIELDS="courseid"/>
+      </KEYS>
+    </TABLE>
+    <TABLE NAME="block_course_admin_unenrol" COMMENT="List of enrolments to exclude from enrolment script">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+        <FIELD NAME="userid" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="courseid" TYPE="int" LENGTH="15" NOTNULL="true" SEQUENCE="false"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+        <KEY NAME="unique" TYPE="unique" FIELDS="userid, courseid"/>
+      </KEYS>
+    </TABLE>
+    <TABLE NAME="block_course_admin_meta" COMMENT="List of parent-child relationships">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+        <FIELD NAME="parentid" TYPE="int" LENGTH="15" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="childid" TYPE="int" LENGTH="15" NOTNULL="true" SEQUENCE="false"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+        <KEY NAME="unique" TYPE="unique" FIELDS="parentid, childid"/>
+      </KEYS>
+    </TABLE>
+    <TABLE NAME="block_course_admin_log" COMMENT="Log all actions from UI for all users">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+        <FIELD NAME="username" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="userid" TYPE="int" LENGTH="15" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="action" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="context" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="course1" TYPE="char" LENGTH="1024" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="metachild" TYPE="char" LENGTH="1024" NOTNULL="false" SEQUENCE="false"/>
+        <FIELD NAME="timestamp" TYPE="char" LENGTH="24" NOTNULL="true" SEQUENCE="false"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+    </TABLE>
+  </TABLES>
+</XMLDB>
